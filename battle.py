@@ -1,3 +1,6 @@
+from char import stats
+from char import name
+from enemies import current_enemy
 import time
 import random
 # Currently pulls dict from other files housing character and enemy stats
@@ -12,7 +15,7 @@ input()
 # if the roll is higher than the hit chance, the attack is succesful
 # ran_num is a list that modifies various factors such as hit rate, damage etc
 # it is pulled from enemies.py in the "random" attribute from the dict of current_enemy
-ran_num = [2, 3, 1, 3, 2] 
+ran_num = [2, 2, 4, 5, 2, 1, 4, 5, 3, 2, 1, 4, 6, 1] 
 player_alive = True
 hit_chance = 65
 in_combat = True
@@ -22,7 +25,6 @@ while in_combat:
     random.shuffle(ran_num)
     print(ran_num)
     shuffle = y, x = current_enemy["random"], ran_num[int(y)]
-    print(y)
     # defining shuffle here after "entering" combat but before any actual maths are done 
     print(f"x = {x}")
     print(f"{current_enemy["name"]} HP Remaining: {current_enemy["hp"]}")
