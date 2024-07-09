@@ -17,7 +17,6 @@ goon = {
     "acc": 5,
     "random": 2,
     "exp": 7,
-    "hit": 2
 }
 
 goon_captain = {
